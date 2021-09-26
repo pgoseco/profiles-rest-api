@@ -1,13 +1,10 @@
 from rest_framework.views import APIView, Response
 
 
-
-
-
 class HelloApiView(APIView):
     """Test API View"""
 
-    def GetRequest(self, request, format=None):
+    def get(self, request, format=None): #it has to be explicitly 'get'
         """Returns a list of APIView Features"""
         an_apiview = [
             'Uses HTTP Methods as function (get, post, patch, put, delete)',
